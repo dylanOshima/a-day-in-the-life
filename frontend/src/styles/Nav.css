@@ -1,0 +1,24 @@
+.Nav {
+  width: 100vw;
+  height: 4.5em;
+  color: #FFF;
+  background-color: #110E22;
+  text-align: left;
+}
+
+.nav-home {
+  width: 2em;
+  height: 2em;
+  margin: 0.2em 2em 0 4em;
+  float: left;
+}
+
+.nav-container {
+  padding: 1em 0 1em 0;
+}
+
+.nav-container > h1 {
+  font-size: 2em;
+  margin: 0 auto 0 auto;
+  display: inline;
+}
