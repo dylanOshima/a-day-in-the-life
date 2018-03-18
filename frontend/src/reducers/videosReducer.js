@@ -7,13 +7,13 @@ export default function stuff(state = initialState.videos, action) {
   switch (action.type) {
     case FETCH_VIDEOS:
       console.log('FETCH_VIDEOS Action');
-      break;
+      return action;
 
     case RECEIVE_VIDEOS:
       newState = action.videos
       console.log('RECEIVE_VIDEOS action');
-      break;
-      
+      return newState;
+
     default:
       return state;
   }

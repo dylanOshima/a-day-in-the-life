@@ -1,28 +1,31 @@
 import * as types from './actionTypes';
 
-function url() {
-  return 'www.url.com';
+function url(str) {
+  if(str === ""){
+    return 'http://localhost:3004';
+  } else {
+    return 'http://localhost:3004' + str;
+  }
 }
 
-export function receiveStuff(json) {
+export function receiveVideos(json) {
+  console.log("******* receiveVideos: ", json)
   return {
     type: types.RECEIVE_VIDEOS
-    , stuff: json.stuff
+    ,videos: json
   };
 }
 
-export function fetchStuff() {
+export function fetchVideos() {
   return dispatch => {
-    return fetch(url(), {
+    return fetch(url('/videos'), {
       method: 'GET',
-      mode: 'cors',
-      credentials: 'include',
       headers: {
         'x-api-key': "1000000",
         'Accept': 'application/json'
       }
     })
     .then(response => response.json())
-    .then(json => dispatch(receiveStuff(json)));
+    .then(json => dispatch(receiveVideos(json)));
   };
 }

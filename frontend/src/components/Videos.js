@@ -6,10 +6,13 @@ import React from 'react';
 
 class Videos extends React.Component {
 
-  renderVideos(){
-    return <div>{this.props.videos}</div>
+  componentWillMount() {
+    this.props.videosActions.fetchVideos();
   }
 
+  renderVideos(){
+    return <div>{JSON.stringify(this.props.videos)}</div>
+  }
 
   render() {
     return (
