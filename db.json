@@ -1,0 +1,18 @@
+{
+  "videos": [
+    {
+      "title": "text",
+      "author": "text",
+      "description": "Text",
+      "thumbnail": "URL",
+      "videoLink": "URL"
+    },
+    {
+      "title": "text",
+      "author": "text",
+      "description": "Text",
+      "videoLink": "URL"
+    }
+  ]
+
+}
