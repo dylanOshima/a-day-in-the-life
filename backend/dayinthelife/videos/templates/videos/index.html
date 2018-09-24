@@ -1,0 +1,14 @@
+{% if videos_list %}
+    <ul>
+    {% for video in videos_list %}
+        <li><a href="https://www.youtube.com/watch?v={{ video.code }}">{{ video.title }}</a></li>
+        <img src="{{video.thumbnail}}">
+    {% endfor %}
+    		<li><a href="/{{ page1.number }}">{{ "nextPage" }}</a></li>
+    		{% if page2 %}
+    		<li><a href="/{{ page2.number }}">{{ "prevPage" }}</a></li>
+    		{% endif %}
+    </ul>
+{% else %}
+    <p>No videos are available.</p>
+{% endif %}
